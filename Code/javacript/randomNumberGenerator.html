@@ -1,0 +1,37 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Random Number Generaton</title>
+        
+    </head>
+    <body>
+        <pre>
+            This is a random number generator.
+            
+            Press the button below to create a random number from a desired number to another desired number.
+        
+        </pre>
+        <button onclick="getNumber()">Roll</button>
+        <p id="minNum"></p>
+        <p id="maxNum"></p>
+        <p id="randomNum"></p>
+        <p id="endp"></p>
+         <script>
+            function getNumber() {
+                var minNumber = parseInt(prompt("Input Min Number:"));
+                var maxNumber = parseInt(prompt("Input Max Number:"));
+                /* 
+                    add an if function to test if input is a letter or number 
+                    
+                    use the `===` strict equality sign
+                */
+                var randomNumber = Math.floor(Math.random() * maxNumber);
+                var endProduct = randomNumber + minNumber;
+                document.getElementById('minNum').innerHTML = `Minimum Number: ` + minNumber;
+                document.getElementById('maxNum').innerHTML = `Maximum Number: ` + maxNumber;
+                document.getElementById('randomNum').innerHTML = `Original Random Number: ` + randomNumber;
+                document.getElementById('endp').innerHTML = `End Product: ` + endProduct;
+            }
+        </script>
+        </body>
+</html>

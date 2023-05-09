@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Number Guessing Game</title>
+    </head>
+    <body>
+        <h1>Random Number Guessing Game!</h1>
+        
+        
+        <script>
+            var correctGuess = false;
+            var randomNumber = Math.floor(Math.random() * 6) + 1;
+            var input = prompt (`Guess a number from 1 to 6`);
+            function checker() { 
+                if ( parseInt(input) === randomNumber ) {
+                    correctGuess = true;
+                }
+            }
+            checker();
+            if ( correctGuess === false ) {
+                if ( parseInt(input ) < randomNumber ) {
+                    correctGuess = false;
+                    input = prompt (`It is more than that`);
+                    checker();
+                } else if ( parseInt(input ) > randomNumber ) {
+                    correctGuess = false;
+                    input = prompt (`It is less than that`);
+                    checker();
+                }
+            }
+            if ( correctGuess === true ) {
+                document.write( `<p> You are right! </p>` );
+            } else {
+                document.write( `<p> Sorry the number was ` + randomNumber + ` </p>` );
+            }
+        </script>
+        
+        
+    </body>
+</html>

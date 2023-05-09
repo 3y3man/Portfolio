@@ -1,0 +1,17 @@
+## Figma Links
+-----------
+# Design
+User flows and Sitemaps - https://www.figma.com/file/dwRiwa6gjT2bHkCnlLUt1J/Figma-Lessons?type=design&node-id=69014%3A3170&t=i3cmD984MTJ22wMP-1
+
+Blackcoffer - https://www.figma.com/file/NE0SG8g5l5w0vH7Th7Xaf4/Blackcoffer-Insights?type=design&node-id=0%3A1&t=GpSomAYbyFSsm5bo-1
+
+Practice designs - https://www.figma.com/file/Fl2wSCX10QlI5Sm76g0Koi/Practice-designs?type=design&node-id=0%3A1&t=7cMrqKuEH15ft9Lv-1
+
+Music - https://www.figma.com/file/7onDMjTFyCboFLmjTCUSlz/Portfolio?type=design&node-id=0%3A1&t=BBbx39338EoSO3kN-1
+
+Wireframe - https://www.figma.com/file/oEkrNEjZru6yNta0iBJoQI/Wireframes-practice?type=design&node-id=29574%3A6327&t=rnkLRbRu3esYuZ0Q-1
+-----------
+# Prototype
+Music Portfolio - https://www.figma.com/proto/7onDMjTFyCboFLmjTCUSlz/Portfolio?page-id=0%3A1&type=design&node-id=104-486&viewport=1031%2C632%2C0.26&scaling=scale-down&starting-point-node-id=104%3A486
+
+Wireframe prototype - https://www.figma.com/proto/oEkrNEjZru6yNta0iBJoQI/Wireframes-practice?page-id=29574%3A6327&type=design&node-id=29574-7158&viewport=265%2C1310%2C0.25&scaling=scale-down&starting-point-node-id=29574%3A7158&show-proto-sidebar=1

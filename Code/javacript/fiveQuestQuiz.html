@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Five Questions Quiz</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        
+        <h1>Five Question Quiz</h1>
+        
+        <div class="rule">
+            <p style="font-size: 20px;">Answer the brain teasers below to win a crown.<br><strong><u>Rules:</u></strong><br>Five correct answers for a Gold Crown.<br>Up to three correct answers for a Silver Crown.<br>At least one correct answer for a Bronze Crown.<br>No correct answers, no crowns.</p>
+        </div>
+        
+        <p class="question">1. What flies without wings?</p>
+        <p class="answer" id="one"></p>
+        <button onclick="questionOne()">Answer</button>
+        
+        <p class="question">2. What’s full of holes but still holds water?</p>
+        <p class="answer" id="two"></p>
+        <button onclick="questionTwo()">Answer</button>
+        
+        <p class="question">3. Where will you find roads without vehicles, forests without trees, and cities without houses?</p>
+        <p class="answer" id="three"></p>
+        <button onclick="questionThree()">Answer</button>
+        
+        <p class="question">4. What can you keep but cannot share and once you share it, you can’t keep it anymore?</p>
+        <p class="answer" id="four"></p>
+        <button onclick="questionFour()">Answer</button>
+        
+        <p class="question">5. The more it dries, the wetter it gets. What is it?</p>
+        <p class="answer" id="five"></p>
+        <button onclick="questionFive()">Answer</button>
+        <br><br>
+        <button onclick="giveCrown()">Done!</button>
+        <br><br>
+        <img id="crown" src="images/noCrown.png">
+        <p id="crownName">You have no crowns. Keep Playing!</p>
+        <br><br>
+        <h2>Answers:</h2>
+        <p><em>Answers show when you are done.</em></p>
+        <ol>
+            <li id="ansOne"></li>
+            <li id="ansTwo"></li>
+            <li id="ansThree"></li>
+            <li id="ansFour"></li>
+            <li id="ansFive"></li>
+        </ol>
+        <script>
+            var aOne = aTwo = aThree = aFour = aFive = false;
+            var x = 0;
+            var crown = document.getElementById(`crown`);
+            
+            function questionOne() {
+                var qOne = prompt(`What flies without wings?`);
+                /* check if empty */
+                while ( qOne === `` ) {
+                    qOne = prompt(`Please write something.\nWhat flies without wings?`);
+                }
+                qOne = qOne.toUpperCase();
+                if ( qOne.match(/TIME/g) ) {
+                        aOne = true;
+                        x += 1;
+                    }
+                document.getElementById(`one`).innerHTML = `Answered`;
+            }
+            function questionTwo() {
+                var qTwo = prompt(`What’s full of holes but still holds water?`);
+                /* check if empty */
+                while ( qTwo === `` ) {
+                    qTwo = prompt(`Please write something.\nWhat’s full of holes but still holds water?`);
+                }
+                qTwo = qTwo.toUpperCase();
+                if ( qTwo.match(/SPONGE/g) ) {
+                    aTwo = true;
+                    x += 1;
+                }    
+                document.getElementById(`two`).innerHTML = `Answered`;
+            }
+            function questionThree() {
+                var qThree = prompt(`Where will you find roads without vehicles, forests without trees, and cities without houses?`);
+                /* check if empty */
+                while ( qThree === `` ) {
+                    qThree = prompt(`Please write something.\nWhere will you find roads without vehicles, forests without trees, and cities without houses?`);
+                }
+                qThree = qThree.toUpperCase();
+                if ( qThree.match(/MAP/g) ) {
+                    aThree = true;
+                    x += 1;
+                }    
+                document.getElementById(`three`).innerHTML = `Answered`;
+            }
+            function questionFour() {
+                var qFour = prompt(`What can you keep but cannot share and once you share it, you can’t keep it anymore?`);
+                /* check if empty */
+                while ( qFour === `` ) {
+                    qFour = prompt(`Please write something.\nWhat can you keep but cannot share and once you share it, you can’t keep it anymore?`);
+                }
+                qFour = qFour.toUpperCase();
+                if ( qFour.match(/SECRET/g) ) {
+                    aFour = true;
+                    x += 1;
+                }    
+                document.getElementById(`four`).innerHTML = `Answered`;
+            }
+            function questionFive() {
+                var qFive = prompt(`The more it dries, the wetter it gets. What is it?`);
+                /* check if empty */
+                while ( qFive === `` ) {
+                    qFive = prompt(`Please write something.\nThe more it dries, the wetter it gets. What is it?`);
+                }
+                qFive = qFive.toUpperCase();
+                if ( qFive.match(/TOWEL/g) ) {
+                    aFive = true;
+                    x += 1;
+                }    
+                document.getElementById(`five`).innerHTML = `Answered`;
+            }
+            function giveCrown() {
+                switch (x) {
+                case 1:
+                    crown.src = `images/bronzeCrown.png`;
+                    document.getElementById(`crownName`).innerHTML = `You got a Bronze Crown.<br>Try harder`;
+                    break;
+                case 2:
+                    crown.src = `images/bronzeCrown.png`;
+                    document.getElementById(`crownName`).innerHTML = `You got a Bronze Crown.<br>Try harder`;
+                    break;
+                case 3:
+                    crown.src = `images/silverCrown.png`;
+                    document.getElementById(`crownName`).innerHTML = `Congratulations! You got a Silver Crown.<br>You could do better`;
+                    break;
+                case 4:
+                    crown.src = `images/silverCrown.png`;
+                    document.getElementById(`crownName`).innerHTML = `Congratulations! You got a Silver Crown.<br>You could do better`;
+                    break;
+                case 5:
+                    crown.src = `images/goldCrown.png`;
+                    document.getElementById(`crownName`).innerHTML = `Congratulations! You got a Gold Crown.<br>Well Done`;
+                    break;
+                }
+                document.getElementById(`ansOne`).innerHTML = `Time`;
+                document.getElementById(`ansTwo`).innerHTML = `Sponge`;
+                document.getElementById(`ansThree`).innerHTML = `Map`;
+                document.getElementById(`ansFour`).innerHTML = `Secret`;
+                document.getElementById(`ansFive`).innerHTML = `Towel`;
+            }
+            
+            
+        </script>
+    </body>
+</html>
