@@ -1,2 +1,2 @@
 # Design-Portfolio
- Design Portfolio for FlexiSAF
+Some HTML, CSS and JavaScript
